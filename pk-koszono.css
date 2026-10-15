@@ -1,0 +1,39 @@
+/* Pap Kőfaragó Üzem – köszönő oldal: kiegészítő stílusok a pk-landing.css mellé (előbb az, utána ez).
+   A pk-landing.css tokenjeit és komponenseit használja; itt csak a köszönő oldal saját osztályai vannak. */
+
+.pk-landing .pk-thanks { background: var(--pk-bg-alt); }
+.pk-landing .pk-thanks__inner {
+  padding-top: var(--pk-hero-y); padding-bottom: var(--pk-hero-y);
+  display: flex; flex-direction: column; gap: var(--pk-space-32);
+}
+
+/* Visszaigazoló rész: jelzés, cím, válaszidő */
+.pk-landing .pk-thanks__head { display: flex; flex-direction: column; align-items: flex-start; }
+.pk-landing .pk-thanks__mark {
+  width: var(--pk-step); height: var(--pk-step); flex: none;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: var(--pk-radius-round); background: var(--pk-green); color: var(--pk-white);
+  margin-bottom: var(--pk-space-20);
+}
+.pk-landing .pk-thanks__mark svg { width: var(--pk-icon-md); height: var(--pk-icon-md); }
+.pk-landing .pk-thanks__head .pk-lead { margin-bottom: 0; }
+
+/* Következő lépések: fehér kártya a lépéslistával */
+.pk-landing .pk-thanks__card {
+  background: var(--pk-white); border-radius: var(--pk-radius-lg); padding: var(--pk-panel-pad);
+  box-shadow: var(--pk-shadow-line);
+}
+.pk-landing .pk-thanks__card .pk-h2 { margin-bottom: var(--pk-space-24); }
+
+/* Segítség és továbblépés */
+.pk-landing .pk-thanks__help { display: flex; flex-direction: column; align-items: flex-start; gap: var(--pk-space-12); }
+.pk-landing .pk-thanks__help p { color: var(--pk-text-muted); }
+.pk-landing .pk-thanks__actions { display: flex; flex-wrap: wrap; gap: var(--pk-space-12) var(--pk-space-16); }
+
+/* Mobil < 600px: a gombok teljes szélességűek, ahogy a landingen */
+@media (max-width: 599px) {
+  .pk-landing .pk-thanks__help { align-items: stretch; }
+  .pk-landing .pk-thanks__actions { width: 100%; }
+  .pk-landing .pk-thanks__actions .pk-btn,
+  .pk-landing .pk-thanks__help .pk-btn { width: 100%; }
+}
